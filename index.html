@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Mart - Your Trusted Electronics Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Electronic Mart</h1>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="#cart" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Category Navigation -->
+    <div class="category-nav">
+        <div class="category-nav-grid">
+            <a href="products.html?category=Mobiles" class="category-nav-item">
+                <i class="fas fa-mobile-alt"></i>
+                <span>Smartphone</span>
+            </a>
+            <a href="products.html?category=Laptops" class="category-nav-item">
+                <i class="fas fa-laptop"></i>
+                <span>Laptops</span>
+            </a>
+            <a href="products.html?category=Gaming" class="category-nav-item">
+                <i class="fas fa-gamepad"></i>
+                <span>Games</span>
+            </a>
+            <a href="products.html?category=Television" class="category-nav-item">
+                <i class="fas fa-tv"></i>
+                <span>Television</span>
+            </a>
+            <a href="products.html?category=Audio" class="category-nav-item">
+                <i class="fas fa-speaker"></i>
+                <span>Speakers</span>
+            </a>
+            <a href="products.html?category=Audio" class="category-nav-item">
+                <i class="fas fa-headphones"></i>
+                <span>Headphones</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="slide-container">
+            <div class="slide slide-1 active">
+                <div class="slide-content">
+                    <h1>New iPhone 15 Pro Launch</h1>
+                    <p>Experience the power of innovation with the latest iPhone. Pre-order now and get exclusive offers!</p>
+                    <a href="products.html?category=Mobiles" class="cta-button">Pre-order Now</a>
+                </div>
+            </div>
+            <div class="slide slide-2">
+                <div class="slide-content">
+                    <h1>Diwali Mega Sale</h1>
+                    <p>Up to 50% off on all electronics! Limited time offer on your favorite gadgets.</p>
+                    <a href="products.html" class="cta-button">Shop Now</a>
+                </div>
+            </div>
+            <div class="slide slide-3">
+                <div class="slide-content">
+                    <h1>Student Special Offer</h1>
+                    <p>Extra 10% discount on laptops and tablets with valid student ID.</p>
+                    <a href="products.html?category=Laptops" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-nav">
+            <div class="slide-nav-dot active"></div>
+            <div class="slide-nav-dot"></div>
+            <div class="slide-nav-dot"></div>
+        </div>
+
+        <div class="slide-arrow prev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="slide-arrow next">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products">
+        <div class="section-title">
+            <h2>Featured Products</h2>
+            <p>Check out our most popular items</p>
+        </div>
+        <div class="product-grid">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="section-title">
+            <h2>Shop by Category</h2>
+            <p>Browse our wide range of products</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <img src="images/mobile.webp" alt="Mobiles">
+                <h3>Mobiles</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/laptop.webp" alt="Laptops">
+                <h3>Laptops</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/audio.webp" alt="Audio">
+                <h3>Audio</h3>
+            </div>
+            <div class="category-card">
+                <img src="images/acc.webp" alt="Accessories">
+                <h3>Accessories</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates on new products and special offers</p>
+            <form id="newsletterForm" class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="cart-total-amount">0.00</span></h3>
+                <button class="checkout-button">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Electronic Mart</h3>
+                <p>Your trusted electronics store in Mumbai</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Electronic Mart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
